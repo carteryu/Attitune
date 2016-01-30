@@ -1,3 +1,5 @@
+var http = require('follow-redirects').http;
+
 var limit = 10;
 var offset = 0;
 var totalTracks = 0;
