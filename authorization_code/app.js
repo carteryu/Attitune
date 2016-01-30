@@ -160,18 +160,18 @@ app.get('/refresh_token', function(req, res) {
 function xmlToJson(url, callback) {
   var req = http.get(url, function(res) {
     var xml = '';
-    
+
     res.on('data', function(chunk) {
       xml += chunk;
     });
 
     res.on('error', function(e) {
       callback(e, null);
-    }); 
+    });
 
     res.on('timeout', function(e) {
       callback(e, null);
-    }); 
+    });
 
     res.on('end', function() {
       parseString(xml, function(err, result) {
@@ -192,7 +192,7 @@ xmlToJson(url, function(err, data) {
   var jsonified = JSON.stringify(data, null, 2);
   var parsed = JSON.parse(jsonified)
   var lyricid = parsed.ArrayOfSearchLyricResult.SearchLyricResult[0].LyricId;
-  var lyricchecksum = parsed.ArrayOfSearchLyricResult.SearchLyricResult[0].LyricChecksum);
+  var lyricchecksum = parsed.ArrayOfSearchLyricResult.SearchLyricResult[0].LyricChecksum;
 });
 
 console.log('Listening on 8888');
