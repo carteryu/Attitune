@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfSearchLyricResult xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://api.chartlyrics.com/">
+  <SearchLyricResult>
+    <TrackId>0</TrackId>
+    <LyricChecksum>f0bed6977b0a82c6327e405a01c17d0b</LyricChecksum>
+    <LyricId>628</LyricId>
+    <SongUrl>http://www.chartlyrics.com/28h-8gWvNk-Rbj1X-R7PXg/Thriller.aspx</SongUrl>
+    <ArtistUrl>http://www.chartlyrics.com/28h-8gWvNk-Rbj1X-R7PXg.aspx</ArtistUrl>
+    <Artist>Michael Jackson</Artist>
+    <Song>Thriller</Song>
+    <SongRank>9</SongRank>
+  </SearchLyricResult>
+  <SearchLyricResult>
+    <TrackId>0</TrackId>
+    <LyricChecksum>d2b766daaa28d765b202f03002857450</LyricChecksum>
+    <LyricId>207571</LyricId>
+    <SongUrl>http://www.chartlyrics.com/28h-8gWvNk-Rbj1X-R7PXg/Thriller+(instrumental).aspx</SongUrl>
+    <ArtistUrl>http://www.chartlyrics.com/28h-8gWvNk-Rbj1X-R7PXg.aspx</ArtistUrl>
+    <Artist>Michael Jackson</Artist>
+    <Song>Thriller (instrumental)</Song>
+    <SongRank>5</SongRank>
+  </SearchLyricResult>
+  <SearchLyricResult>
+    <TrackChecksum>14187832c4f9ccf052ed30eb2e427c98</TrackChecksum>
+    <TrackId>359120</TrackId>
+    <LyricId>0</LyricId>
+    <SongUrl>http://www.chartlyrics.com/app/add.aspx?a=519&amp;t=359120</SongUrl>
+    <ArtistUrl>http://www.chartlyrics.com/28h-8gWvNk-Rbj1X-R7PXg.aspx</ArtistUrl>
+    <Artist>Michael Jackson</Artist>
+    <Song>Voice Over Session From "Thriller" (feat. Vincent Price)</Song>
+    <SongRank>4</SongRank>
+  </SearchLyricResult>
+  <SearchLyricResult>
+    <TrackChecksum>33a8d9e6938660de3a6ba5c6ee348aff</TrackChecksum>
+    <TrackId>8804443</TrackId>
+    <LyricId>0</LyricId>
+    <SongUrl>http://www.chartlyrics.com/app/add.aspx?a=519&amp;t=8804443</SongUrl>
+    <ArtistUrl>http://www.chartlyrics.com/28h-8gWvNk-Rbj1X-R7PXg.aspx</ArtistUrl>
+    <Artist>Michael Jackson</Artist>
+    <Song>Thriller Megamix</Song>
+    <SongRank>3</SongRank>
+  </SearchLyricResult>
+  <SearchLyricResult>
+    <TrackChecksum>8bc0964d2af95c105b9cc067f73c1102</TrackChecksum>
+    <TrackId>9726007</TrackId>
+    <LyricId>0</LyricId>
+    <SongUrl>http://www.chartlyrics.com/app/add.aspx?a=519&amp;t=9726007</SongUrl>
+    <ArtistUrl>http://www.chartlyrics.com/28h-8gWvNk-Rbj1X-R7PXg.aspx</ArtistUrl>
+    <Artist>Michael Jackson</Artist>
+    <Song>Thriller Megamix (radio edit)</Song>
+    <SongRank>2</SongRank>
+  </SearchLyricResult>
+  <SearchLyricResult>
+    <TrackChecksum>b56a06d4d2d88950881bfd0350723003</TrackChecksum>
+    <TrackId>7887922</TrackId>
+    <LyricId>0</LyricId>
+    <SongUrl>http://www.chartlyrics.com/app/add.aspx?a=519&amp;t=7887922</SongUrl>
+    <ArtistUrl>http://www.chartlyrics.com/28h-8gWvNk-Rbj1X-R7PXg.aspx</ArtistUrl>
+    <Artist>Michael Jackson</Artist>
+    <Song>Carousel (outtake From the Thriller Sessions)</Song>
+    <SongRank>2</SongRank>
+  </SearchLyricResult>
+  <SearchLyricResult>
+    <TrackChecksum>ef5919543ec78f4d9498143fa8e372c0</TrackChecksum>
+    <TrackId>5518274</TrackId>
+    <LyricId>0</LyricId>
+    <SongUrl>http://www.chartlyrics.com/app/add.aspx?a=519&amp;t=5518274</SongUrl>
+    <ArtistUrl>http://www.chartlyrics.com/28h-8gWvNk-Rbj1X-R7PXg.aspx</ArtistUrl>
+    <Artist>Michael Jackson</Artist>
+    <Song>Thriller (album version)</Song>
+    <SongRank>1</SongRank>
+  </SearchLyricResult>
+  <SearchLyricResult>
+    <TrackChecksum>b9ae7425befbe9471dfac56a943e1c22</TrackChecksum>
+    <TrackId>5456663</TrackId>
+    <LyricId>0</LyricId>
+    <SongUrl>http://www.chartlyrics.com/app/add.aspx?a=519&amp;t=5456663</SongUrl>
+    <ArtistUrl>http://www.chartlyrics.com/28h-8gWvNk-Rbj1X-R7PXg.aspx</ArtistUrl>
+    <Artist>Michael Jackson</Artist>
+    <Song>Thriller (DBC Screamin' remix)</Song>
+    <SongRank>1</SongRank>
+  </SearchLyricResult>
+  <SearchLyricResult>
+    <TrackChecksum>116839ce85baa717c333da14250b7b6c</TrackChecksum>
+    <TrackId>9701597</TrackId>
+    <LyricId>0</LyricId>
+    <SongUrl>http://www.chartlyrics.com/app/add.aspx?a=519&amp;t=9701597</SongUrl>
+    <ArtistUrl>http://www.chartlyrics.com/28h-8gWvNk-Rbj1X-R7PXg.aspx</ArtistUrl>
+    <Artist>Michael Jackson</Artist>
+    <Song>Thriller (feat. The Notorious B.I.G.)</Song>
+    <SongRank>1</SongRank>
+  </SearchLyricResult>
+  <SearchLyricResult>
+    <TrackChecksum>33624adb4b5c630f96d558d82326a7d6</TrackChecksum>
+    <TrackId>7750778</TrackId>
+    <LyricId>0</LyricId>
+    <SongUrl>http://www.chartlyrics.com/app/add.aspx?a=519&amp;t=7750778</SongUrl>
+    <ArtistUrl>http://www.chartlyrics.com/28h-8gWvNk-Rbj1X-R7PXg.aspx</ArtistUrl>
+    <Artist>Michael Jackson</Artist>
+    <Song>Vincent Price Excerpt (From "Thriller" Voice-Over session)</Song>
+    <SongRank>1</SongRank>
+  </SearchLyricResult>
+  <SearchLyricResult xsi:nil="true" />
+</ArrayOfSearchLyricResult>
