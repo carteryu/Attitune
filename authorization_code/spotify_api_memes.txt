@@ -1,0 +1,50 @@
+var limit = 10;
+var offset = 0;
+var totalTracks = 0;
+
+var rawData = [];
+var artists = [];
+var titles = [];
+var i = 0;
+
+do{
+
+  var options = {
+    host: 'api.spotify.com',
+    path: '/v1/me/tracks?limit=' + limit + "&offset=" + offset,
+    method: 'GET',
+    headers: {
+      'Authorization': 'Bearer BQBDyNHrMdn2ygYbe2AFEr4403EFvW8ATM1X_n3oC28AFvdD5R48jWwDYkIsDAUKe1CkNsSgesaUo6wVDX7kY0286nrwP250HCyCu9yLl3tSToTpcNbkc5qRERMT-I8OYWNF-xwB3py3b2vUaCo'
+    }
+  };
+
+  var req = http.request(options, function(res) {
+    res.setEncoding('utf8');
+
+    res.on('data', function (chunk) {
+      rawData[i] = chunk;
+      thisData = JSON.parse(rawData[i]);
+      for(var k = 0; k < limit; k++){
+        console.log(thisData.items[i].track.artists[0].name);
+      }
+      i++;
+    });
+  });
+
+  req.on('error', function(e) {
+    console.log('problem with request: ' + e.message);
+  });
+
+  //console.log(rawData);
+
+  /**
+  for(var j = 0; j < rawData.length; j++){
+    var thisData = JSON.parse(rawData[j]);
+    for(var k = 0; k < limit; k++){
+      console.log(thisData.items[i].track.artists[0].name);
+    }
+  }
+  */
+  req.end();
+}
+while((offset + limit) < totalTracks);

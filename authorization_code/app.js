@@ -12,7 +12,7 @@ var request = require('request'); // "Request" library
 var querystring = require('querystring');
 var cookieParser = require('cookie-parser');
 var parseString = require('xml2js').parseString;
-var http = require('http')
+var http = require('follow-redirects').http;
 
 var client_id = '03ffe0cac0a0401aa6673c3cf6d02ced'; // Your client id
 var client_secret = 'a57c43efb9644574a96d6623fb8bfbc2'; // Your client secret
@@ -143,35 +143,21 @@ app.get('/refresh_token', function(req, res) {
   });
 });
 
-// var XMLHttpRequest = require("xmlhttprequest").XMLHttpRequest;
-// var xhr = new XMLHttpRequest();
-// xhr.open("GET", "http://api.chartlyrics.com/apiv1.asmx/SearchLyric?artist=Michael%20Jackson&song=Thriller",false);
-// xhr.send();
-// xmldoc=xhr.responseXML;
-
-// parseString(xmldoc, function(error,result){
-//   if(error){
-//     console.log("eERROR: " + error);
-//     return;
-//   }
-//   console.dir(JSON.stringify(result));
-// });
-
 function xmlToJson(url, callback) {
   var req = http.get(url, function(res) {
     var xml = '';
-    
+
     res.on('data', function(chunk) {
       xml += chunk;
     });
 
     res.on('error', function(e) {
       callback(e, null);
-    }); 
+    });
 
     res.on('timeout', function(e) {
       callback(e, null);
-    }); 
+    });
 
     res.on('end', function() {
       parseString(xml, function(err, result) {
@@ -183,17 +169,69 @@ function xmlToJson(url, callback) {
 
 var url = "http://api.chartlyrics.com/apiv1.asmx/SearchLyric?artist=Michael%20Jackson&song=Thriller"
 
+
 xmlToJson(url, function(err, data) {
   if (err) {
-
     return console.err(err);
   }
 
   var jsonified = JSON.stringify(data, null, 2);
   var parsed = JSON.parse(jsonified)
   var lyricid = parsed.ArrayOfSearchLyricResult.SearchLyricResult[0].LyricId;
-  var lyricchecksum = parsed.ArrayOfSearchLyricResult.SearchLyricResult[0].LyricChecksum);
+  var lyricchecksum = parsed.ArrayOfSearchLyricResult.SearchLyricResult[0].LyricChecksum;
+  //console.log(lyricid);
 });
+
+var limit = 10;
+var offset = 0;
+var totalTracks = 0;
+
+var rawData = [];
+var artists = [];
+var titles = [];
+var i = 0;
+
+do{
+
+  var options = {
+    host: 'api.spotify.com',
+    path: '/v1/me/tracks?limit=' + limit + "&offset=" + offset,
+    method: 'GET',
+    headers: {
+      'Authorization': 'Bearer BQBDyNHrMdn2ygYbe2AFEr4403EFvW8ATM1X_n3oC28AFvdD5R48jWwDYkIsDAUKe1CkNsSgesaUo6wVDX7kY0286nrwP250HCyCu9yLl3tSToTpcNbkc5qRERMT-I8OYWNF-xwB3py3b2vUaCo'
+    }
+  };
+
+  var req = http.request(options, function(res) {
+    res.setEncoding('utf8');
+
+    res.on('data', function (chunk) {
+      rawData[i] = chunk;
+      thisData = JSON.parse(rawData[i]);
+      for(var k = 0; k < limit; k++){
+        console.log(thisData.items[i].track.artists[0].name);
+      }
+      i++;
+    });
+  });
+
+  req.on('error', function(e) {
+    console.log('problem with request: ' + e.message);
+  });
+
+  //console.log(rawData);
+
+  /**
+  for(var j = 0; j < rawData.length; j++){
+    var thisData = JSON.parse(rawData[j]);
+    for(var k = 0; k < limit; k++){
+      console.log(thisData.items[i].track.artists[0].name);
+    }
+  }
+  */
+  req.end();
+}
+while((offset + limit) < totalTracks);
 
 console.log('Listening on 8888');
 app.listen(8888);
