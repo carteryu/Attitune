@@ -9,11 +9,11 @@
 
 /* Reset */
 
-	html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+	html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
 		margin: 0;
 		padding: 0;
 		border: 0;
-		font-size: 100%;
+		/*font-size: 100%;*/
 		font: inherit;
 		vertical-align: baseline;
 	}
@@ -1807,9 +1807,7 @@
 		}
 
 	body, input, select, textarea {
-		color: #666;
 		font-family: "Source Sans Pro", Helvetica, sans-serif;
-		font-size: 16pt;
 		font-weight: 300;
 		line-height: 1.65em;
 	}
@@ -1830,7 +1828,6 @@
 		}
 
 	strong, b {
-		color: #555;
 		font-weight: 400;
 	}
 
@@ -1843,8 +1840,7 @@
 	}
 
 	h1, h2, h3, h4, h5, h6 {
-		color: #555;
-		line-height: 1em;
+		line-height: 0em;
 		margin: 0 0 1em 0;
 	}
 
@@ -1863,10 +1859,10 @@
 		line-height: 1.35em;
 	}
 
-	h3 {
-		font-size: 1.35em;
+	/*h3 {
+		font-size: 4em;
 		line-height: 1.5em;
-	}
+	}*/
 
 	h4 {
 		font-size: 1.25em;
@@ -1966,11 +1962,11 @@
 		margin-top: -1em;
 	}
 
-	header h3 + p {
-		font-size: 1.1em;
+	/*header h3 + p {
+		font-size: 4em;
 		line-height: 1.5em;
 		margin-top: -0.8em;
-	}
+	}*/
 
 	header h4 + p,
 	header h5 + p,
@@ -2798,10 +2794,10 @@
 
 	#header {
 		padding: 9em 0 9em 0 ;
-		background-color: #4686a0;
+		background-color: #CA3C43;
 		color: rgba(255, 255, 255, 0.75);
 		background-attachment: fixed,							fixed,							fixed;
-		background-image: url("images/overlay2.png"), url("images/overlay3.svg"), linear-gradient(90deg, #9dc66b 5%, #4fa49a 30%, #4361c2);
+		/*background-image: url("images/overlay2.png"), url("images/overlay3.svg"), linear-gradient(90deg, #9dc66b 5%, #4fa49a 30%, #4361c2); */
 		background-position: top left,						center center,					center center;
 		background-size: auto,							cover,							cover;
 		overflow: hidden;
@@ -2809,20 +2805,27 @@
 		text-align: center;
 	}
 
-		.icon-music-icon {
+		.actions {
+			padding-top: 3em;
+		}
+
+		.inner .icon-music-icon {
+			padding-top: 1em;
 			font-size: 75px;
 		}
 
-		#header a {
-			border-bottom-color: rgba(255, 255, 255, 0.5);
+		.inner .title-name {
+			font-size: 35px;
+		}
+		#header h3 {
+			padding-top: 1em;
+			color: #ffffff;
+			font-size: 50px;
 		}
 
-			#header a:hover {
-				color: #ffffff;
-			}
-
-		#header h1, #header h2, #header h3, #header h4, #header h5, #header h6, #header strong, #header b {
+		#header h1, #header h2, #header h4, #header h5, #header h6, #header b {
 			color: #ffffff;
+			font-size: 24px;
 		}
 
 		#header header p {
@@ -2956,7 +2959,7 @@
 			-webkit-transition: opacity 1s ease;
 			-ms-transition: opacity 1s ease;
 			transition: opacity 1s ease;
-			background-image: linear-gradient(90deg, #4fa49a, #4361c2);
+			background-image: linear-gradient(90deg, #CA9143, #CA3C43);
 			content: '';
 			height: 100%;
 			left: 0;
@@ -3304,11 +3307,11 @@
 				}
 
 		/* Footer */
-
+/*
 			#footer {
 				padding: 3em 1.5em 3em 1.5em ;
 			}
-
+*/
 	}
 
 /* XSmall */
@@ -3374,7 +3377,7 @@
 					display: none;
 				}
 
-		/* Footer */
+		/* Footer */ /*
 
 			#footer {
 				padding: 2em 1.5em 2em 1.5em ;
@@ -3396,6 +3399,7 @@
 						}
 
 	}
+	*/
 
 /* XXSmall */
 
@@ -3420,9 +3424,9 @@
 			}
 
 		/* Footer */
-
+/*
 			#footer {
 				padding: 2em 1em 2em 1em ;
 			}
-
+*/
 	}
